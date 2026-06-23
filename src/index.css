@@ -1,0 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --color-background: #1E232B;
+  --color-accent: #FF5B37;
+  --font-sans: "Inter", sans-serif;
+}
+
+body {
+  @apply bg-background text-gray-200 font-sans antialiased selection:bg-accent selection:text-white;
+}
+
+@utility text-gradient {
+  @apply bg-clip-text text-transparent bg-gradient-to-r from-white to-gray-400;
+}
