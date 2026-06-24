@@ -1,10 +1,12 @@
+import minhaFoto from "../assets/eu animacao.png";
+
 export const portfolioData = {
   // Substitua as informações abaixo pelas suas
   personalInfo: {
     name: "Gabriel Ceron Bianchi",
     title: "Desenvolvedor de Software",
     // Substitua a URL abaixo pela sua foto (ex: link do github, linkedin ou caminho local importado)
-    profilePicture: "/src/assets/eu animacao.png",
+    profilePicture: minhaFoto,
     about: "Sou um desenvolvedor apaixonado por criar soluções web incríveis. Tenho experiência na construção de interfaces de usuário dinâmicas e funcionais, sempre buscando aprender e me atualizar com as melhores tecnologias do mercado.",
     stats: [
       { value: "120+", label: "Projetos Concluídos" },
