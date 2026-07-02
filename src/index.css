@@ -1,16 +1,51 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 @import "tailwindcss";
 
 @theme {
-  --color-background: #1E232B;
-  --color-accent: #FF5B37;
+  --color-dark-bg: #000000; /* Fundo estático da cor preta */
+  --color-dark-surface: #0a0a0a; /* Dark gray surface */
+  --color-primary: #ffffff; /* White accents */
+  --color-primary-hover: #d1d5db; /* Gray hover */
+  --color-primary-glow: rgba(255, 255, 255, 0.4);
+  
   --font-sans: "Inter", sans-serif;
+  --font-tech: "Space Mono", monospace;
 }
 
 body {
-  @apply bg-background text-gray-200 font-sans antialiased selection:bg-accent selection:text-white;
+  @apply bg-dark-bg text-gray-200 font-sans antialiased selection:bg-primary selection:text-black overflow-x-hidden;
+}
+
+/* Base Utility Classes */
+@utility text-tech {
+  @apply font-tech tracking-tight;
 }
 
 @utility text-gradient {
+  @apply bg-clip-text text-transparent bg-gradient-to-r from-white to-gray-500;
+}
+
+@utility text-gradient-green {
   @apply bg-clip-text text-transparent bg-gradient-to-r from-white to-gray-400;
+}
+
+/* Animations */
+@keyframes orbit-1 {
+  0% { transform: rotate(0deg) translateX(150px) rotate(0deg) scale(1); }
+  50% { transform: rotate(180deg) translateX(250px) rotate(-180deg) scale(1.2); }
+  100% { transform: rotate(360deg) translateX(150px) rotate(-360deg) scale(1); }
+}
+
+@keyframes orbit-2 {
+  0% { transform: rotate(0deg) translateX(200px) rotate(0deg) scale(1.2); }
+  50% { transform: rotate(-180deg) translateX(100px) rotate(180deg) scale(0.8); }
+  100% { transform: rotate(-360deg) translateX(200px) rotate(360deg) scale(1.2); }
+}
+
+@utility animate-orbit-1 {
+  animation: orbit-1 20s infinite linear;
+}
+
+@utility animate-orbit-2 {
+  animation: orbit-2 25s infinite linear;
 }

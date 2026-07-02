@@ -4,17 +4,12 @@ export const portfolioData = {
   // Substitua as informações abaixo pelas suas
   personalInfo: {
     name: "Gabriel Ceron Bianchi",
-    title: "Desenvolvedor de Software",
+    title: "Desenvolvedor Full Stack",
     // Substitua a URL abaixo pela sua foto (ex: link do github, linkedin ou caminho local importado)
     profilePicture: minhaFoto,
-    about: "Sou um desenvolvedor apaixonado por criar soluções web incríveis. Tenho experiência na construção de interfaces de usuário dinâmicas e funcionais, sempre buscando aprender e me atualizar com as melhores tecnologias do mercado.",
-    stats: [
-      { value: "120+", label: "Projetos Concluídos" },
-      { value: "95%", label: "Satisfação dos Clientes" },
-      { value: "10+", label: "Anos de Experiência" }
-    ],
+    about: "Sou um desenvolvedor apaixonado por fazer objetos funcionais e úteis. Tenho experiência na construção de interfaces de usuário dinâmicas e funcionais, sempre buscando aprender e me atualizar com as melhores tecnologias do mercado, trazendo um pouco de originalidade nas minhas aplicações e deixando um pouco da marca 'Gabriel' nelas.",
     social: {
-      email: "mailto:g.ceronbianchi@exemplo.com",
+      email: "mailto:g.ceronbianchi@gmail.com",
       github: "https://github.com/cbGabriel9",
       linkedin: "https://www.linkedin.com/in/gabriel-ceron-bianchi-58435425b/"
     }

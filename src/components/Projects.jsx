@@ -2,63 +2,80 @@ import React from 'react';
 
 const Projects = ({ projects }) => {
   return (
-    <section id="projects" className="py-16">
-      <div className="text-center mb-16">
-        <h2 className="text-4xl font-bold mb-4">Projetos</h2>
-        <div className="w-px h-10 bg-accent mx-auto"></div>
+    <section id="projects" className="py-24 relative">
+      <div className="flex flex-col items-center mb-20 relative z-10">
+        <h3 className="text-tech text-primary mb-2 text-sm uppercase tracking-widest">
+          // Meus_Trabalhos
+        </h3>
+        <h2 className="text-4xl md:text-5xl font-bold mb-6">Projetos</h2>
+        <div className="w-px h-16 bg-gradient-to-b from-primary to-transparent"></div>
       </div>
 
-      <div className="space-y-32">
+      <div className="space-y-32 relative z-10">
         {projects.map((project, index) => {
           const isEven = index % 2 === 0;
           
           return (
-            <div key={project.id} className={`flex flex-col md:flex-row items-center gap-12 ${!isEven ? 'md:flex-row-reverse' : ''}`}>
+            <div key={project.id} className={`group flex flex-col md:flex-row items-center gap-12 ${!isEven ? 'md:flex-row-reverse' : ''}`}>
               
               {/* Info Column */}
-              <div className="md:w-1/2">
-                <h3 className="text-3xl font-bold mb-6">{project.title}</h3>
-                
-                <div className="flex flex-wrap gap-3 mb-6">
-                  {project.tags.map((tag, tagIndex) => (
-                    <span key={tagIndex} className="px-4 py-1 text-xs font-medium bg-gray-800 text-gray-300 rounded-full border border-gray-700">
-                      {tag}
-                    </span>
-                  ))}
-                </div>
-                
-                <p className="text-gray-400 mb-8 leading-relaxed">
-                  {project.description}
-                </p>
-                
-                <div className="flex gap-4 items-center">
-                  <a 
-                    href={project.githubUrl} 
-                    target="_blank" 
-                    rel="noopener noreferrer"
-                    className="bg-accent text-white px-6 py-2.5 rounded font-medium hover:bg-orange-600 transition-colors"
-                  >
-                    Ver Github
-                  </a>
-                  <a 
-                    href={project.liveUrl} 
-                    target="_blank" 
-                    rel="noopener noreferrer"
-                    className="text-gray-300 hover:text-white transition-colors text-sm font-medium border-b border-transparent hover:border-white pb-1 flex items-center gap-2"
-                  >
-                    Ver projeto ↗
-                  </a>
+              <div className="md:w-1/2 relative">
+                <div className="absolute -inset-4 bg-primary/5 rounded-xl opacity-0 group-hover:opacity-100 blur-xl transition-opacity duration-500"></div>
+                <div className="relative">
+                  <div className="text-tech text-primary mb-2 opacity-70 text-sm font-medium">0{index + 1}.</div>
+                  <h3 className="text-3xl font-bold mb-6 text-white group-hover:text-primary transition-colors duration-300">
+                    {project.title}
+                  </h3>
+                  
+                  <div className="p-6 rounded-md bg-dark-surface border border-white/5 shadow-2xl relative z-20 mb-6 group-hover:border-primary/30 group-hover:-translate-y-1 transition-all duration-300">
+                    <p className="text-gray-400 leading-relaxed group-hover:text-gray-300 transition-colors">
+                      {project.description}
+                    </p>
+                  </div>
+                  
+                  <div className="flex flex-wrap gap-3 mb-8 relative z-20">
+                    {project.tags.map((tag, tagIndex) => (
+                      <span 
+                        key={tagIndex} 
+                        className="px-3 py-1 text-xs font-tech text-primary bg-primary/10 rounded-sm border border-primary/20 hover:bg-primary/20 hover:-translate-y-1 transition-transform cursor-default"
+                        style={{ transitionDelay: `${tagIndex * 50}ms` }}
+                      >
+                        {tag}
+                      </span>
+                    ))}
+                  </div>
+                  
+                  <div className="flex gap-6 items-center relative z-20 font-tech text-sm font-bold">
+                    <a 
+                      href={project.githubUrl} 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className="text-white hover:text-primary flex items-center gap-2 transition-colors relative after:content-[''] after:absolute after:-bottom-1 after:left-0 after:w-0 after:h-[1px] after:bg-primary hover:after:w-full after:transition-all after:duration-300"
+                    >
+                      &lt; Código /&gt;
+                    </a>
+                    <a 
+                      href={project.liveUrl} 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className="text-white hover:text-primary flex items-center gap-2 transition-colors relative after:content-[''] after:absolute after:-bottom-1 after:left-0 after:w-0 after:h-[1px] after:bg-primary hover:after:w-full after:transition-all after:duration-300"
+                    >
+                      Ver Projeto ↗
+                    </a>
+                  </div>
                 </div>
               </div>
               
               {/* Image Column */}
-              <div className="md:w-1/2 relative group">
-                <div className="absolute inset-0 bg-gray-800 transform translate-x-4 translate-y-4 rounded-lg -z-10 group-hover:translate-x-6 group-hover:translate-y-6 transition-transform"></div>
-                <img 
-                  src={project.imageUrl} 
-                  alt={project.title} 
-                  className="w-full h-auto rounded-lg shadow-xl object-cover border border-gray-800"
-                />
+              <div className="md:w-1/2 relative">
+                <a href={project.liveUrl} target="_blank" rel="noopener noreferrer" className="block relative overflow-hidden rounded-md border border-white/10 group-hover:border-primary/50 transition-colors duration-500">
+                  <div className="absolute inset-0 bg-primary/20 mix-blend-overlay opacity-100 group-hover:opacity-0 transition-opacity duration-500 z-10"></div>
+                  <img 
+                    src={project.imageUrl} 
+                    alt={project.title} 
+                    className="w-full h-auto object-cover transform scale-100 group-hover:scale-105 transition-transform duration-700 ease-out grayscale group-hover:grayscale-0"
+                  />
+                </a>
               </div>
             </div>
           );
