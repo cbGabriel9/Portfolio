@@ -61,11 +61,10 @@ const Projects = ({ projects }) => {
               {/* Image Column */}
               <div className="md:w-1/2 relative">
                 <a href={project.liveUrl} target="_blank" rel="noopener noreferrer" className="block relative overflow-hidden rounded-md border border-white/10 group-hover:border-primary/50 transition-colors duration-500">
-                  <div className="absolute inset-0 bg-primary/20 mix-blend-overlay opacity-100 group-hover:opacity-0 transition-opacity duration-500 z-10"></div>
                   <img
                     src={project.imageUrl}
                     alt={project.title}
-                    className="w-full aspect-video object-cover object-center transform scale-100 group-hover:scale-105 transition-transform duration-700 ease-out grayscale group-hover:grayscale-0"
+                    className="w-full aspect-video object-cover object-center transform scale-100 group-hover:scale-105 transition-transform duration-700 ease-out"
                   />
                 </a>
               </div>
