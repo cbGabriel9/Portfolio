@@ -7,7 +7,7 @@ export const portfolioData = {
     title: "Desenvolvedor Full Stack",
     // Substitua a URL abaixo pela sua foto (ex: link do github, linkedin ou caminho local importado)
     profilePicture: minhaFoto,
-    about: "Sou um desenvolvedor apaixonado por fazer objetos funcionais e úteis. Tenho experiência na construção de interfaces de usuário dinâmicas e funcionais, sempre buscando aprender e me atualizar com as melhores tecnologias do mercado, trazendo um pouco de originalidade nas minhas aplicações e deixando um pouco da marca 'Gabriel' nelas.",
+    about: "Sou um desenvolvedor apaixonado por fazer aplicações funcionais e úteis. Tenho experiência na construção de interfaces de usuário dinâmicas e funcionais, sempre buscando aprender e me atualizar com as melhores tecnologias do mercado, trazendo um pouco de originalidade nas minhas aplicações e deixando um pouco do 'Gabriel' nelas.",
     social: {
       email: "mailto:g.ceronbianchi@gmail.com",
       github: "https://github.com/cbGabriel9",
@@ -33,39 +33,19 @@ export const portfolioData = {
     // ADICIONE SEUS PROJETOS AQUI
     {
       id: 1,
-      title: "Batalha Naval",
-      tags: ["HTML", "CSS", "Javascript", "Node.js"],
-      description: "O clássico jogo de Batalha Naval. O usuário pode jogar contra o computador em um tabuleiro interativo com gráficos modernos.",
-      githubUrl: "#", // Link para o repositório
+      title: "RPG System",
+      tags: ["HTML", "CSS", "PHP", "JavaScript", "MySQL"],
+      description: "Plataforma WEB para criação, gerenciamento e participação em mesas de RPG (Role-Playing Game).",
       liveUrl: "#",   // Link para o projeto no ar
-      imageUrl: "https://via.placeholder.com/600x400/1e232b/ffffff?text=Projeto+Batalha+Naval"
+      imageUrl: "/src/assets/logoRpgSystem.jpg"
     },
     {
       id: 2,
-      title: "API de Filmes",
-      tags: ["HTML", "CSS", "Javascript", "API", "Version Control"],
-      description: "Uma aplicação que consome dados de uma API externa para listar e buscar informações de filmes, séries e atores.",
-      githubUrl: "#",
+      title: "Mystogan ERP",
+      tags: ["HTML", "CSS", "React", "Python", "FastAPI", "Docker", "Axios", "PostgreSQL"],
+      description: "Uma aplicação destinada a fazer o controle interno de uma empresa, contendo os módulos de: Dashboard Geral, Pedidos, Parceiros, Estoque, Entregas, Financeiro e Gestão do RH",
       liveUrl: "#",
-      imageUrl: "https://via.placeholder.com/600x400/1e232b/ffffff?text=Projeto+API+Filmes"
-    },
-    {
-      id: 3,
-      title: "Calculadora Javascript",
-      tags: ["HTML", "CSS", "Javascript", "Node.js"],
-      description: "Uma calculadora completa com operações básicas e avançadas, construída puramente com Javascript e um layout responsivo.",
-      githubUrl: "#",
-      liveUrl: "#",
-      imageUrl: "https://via.placeholder.com/600x400/1e232b/ffffff?text=Projeto+Calculadora"
-    },
-    {
-      id: 4,
-      title: "Landing Page SaaS",
-      tags: ["HTML", "CSS", "React", "Tailwind"],
-      description: "Página de aterrissagem (landing page) para um produto SaaS. Focada em conversão, com design atrativo e moderno.",
-      githubUrl: "#",
-      liveUrl: "#",
-      imageUrl: "https://via.placeholder.com/600x400/1e232b/ffffff?text=Projeto+Landing+Page"
+      imageUrl: "/src/assets/MystoganERPLogo.png"
     }
   ],
   contact: {

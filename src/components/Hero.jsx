@@ -27,7 +27,7 @@ const Hero = ({ data }) => {
               Tem um projeto? <span className="group-hover:translate-x-1 transition-transform">-&gt;</span>
             </span>
           </a>
-          <a href="#" className="group px-8 py-4 border border-primary/30 text-primary font-tech font-bold rounded-sm transition-all hover:bg-primary/10 hover:border-primary hover:shadow-[0_0_20px_var(--color-primary-glow)]">
+          <a href="/curriculo.pdf" target="_blank" rel="noopener noreferrer" className="group px-8 py-4 border border-primary/30 text-primary font-tech font-bold rounded-sm transition-all hover:bg-primary/10 hover:border-primary hover:shadow-[0_0_20px_var(--color-primary-glow)]">
             Meu currículo
           </a>
         </div>
@@ -44,11 +44,11 @@ const Hero = ({ data }) => {
           <div className="absolute bottom-0 left-0 w-4 h-4 border-b-2 border-l-2 border-primary scale-[2] -translate-x-10 translate-y-10 opacity-100"></div>
           
           {/* Profile image container */}
-          <div className="relative w-72 h-72 md:w-80 md:h-80 rounded-full overflow-hidden border-2 border-primary shadow-[0_0_50px_var(--color-primary-glow)]">
+          <div className="relative w-72 h-72 md:w-80 md:h-80 rounded-full overflow-hidden border-2 border-primary shadow-[0_0_50px_var(--color-primary-glow)] flex items-center justify-center">
             <img 
               src={data.profilePicture} 
               alt={data.name} 
-              className="w-full h-full object-cover transform scale-105"
+              className="w-full h-full object-cover object-[60%_center] transform scale-105"
             />
           </div>
         </div>
