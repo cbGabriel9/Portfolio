@@ -1,4 +1,6 @@
 import minhaFoto from "../assets/eu animacao.png";
+import rpgSystemImagem from "../assets/logoRpgSystem.jpg";
+import mystoganERPImagem from "../assets/MystoganERPLogo.png";
 
 export const portfolioData = {
   // Substitua as informações abaixo pelas suas
@@ -37,7 +39,7 @@ export const portfolioData = {
       tags: ["HTML", "CSS", "PHP", "JavaScript", "MySQL"],
       description: "Plataforma WEB para criação, gerenciamento e participação em mesas de RPG (Role-Playing Game).",
       liveUrl: "#",   // Link para o projeto no ar
-      imageUrl: "/src/assets/logoRpgSystem.jpg"
+      imageUrl: rpgSystemImagem
     },
     {
       id: 2,
@@ -45,7 +47,7 @@ export const portfolioData = {
       tags: ["HTML", "CSS", "React", "Python", "FastAPI", "Docker", "Axios", "PostgreSQL"],
       description: "Uma aplicação destinada a fazer o controle interno de uma empresa, contendo os módulos de: Dashboard Geral, Pedidos, Parceiros, Estoque, Entregas, Financeiro e Gestão do RH",
       liveUrl: "#",
-      imageUrl: "/src/assets/MystoganERPLogo.png"
+      imageUrl: mystoganERPImagem
     }
   ],
   contact: {
